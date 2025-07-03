@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO APP</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <div class="container max-w-4xl mx-auto p-6">
+    <h1 class="text-center text-3xl font-bold mb-6">TODO APP</h1>
+
+    <div class="mt-4">
+      <input id="taskTitle" type="text" class="p-2 rounded-md w-full bg-gray-800 text-white border border-gray-600" placeholder="عنوان تسک را وارد کنید...">
+      <textarea id="taskDescription" class="p-2 mt-2 rounded-md w-full bg-gray-800 text-white border border-gray-600" placeholder="توضیحات تسک را وارد کنید..."></textarea>
+      <button id="addTaskBtn" class="mt-2 bg-blue-500 hover:bg-blue-400 text-white p-2 rounded-md w-full">اضافه کردن تسک</button>
+    </div>
+
+    <div class="mt-8">
+      <ul id="taskList"></ul>
+    </div>
+
+    <div id="editTaskForm" class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 p-6 rounded-lg shadow-lg w-96 z-50">
+      <div class="text-center text-xl font-bold mb-4">ویرایش تسک</div>
+      <input id="editTitle" type="text" class="p-2 rounded-md w-full bg-gray-700 text-white border border-gray-600 mb-2" placeholder="عنوان تسک">
+      <textarea id="editDescription" class="p-2 w-full bg-gray-700 text-white border border-gray-600 mb-2" placeholder="توضیحات تسک"></textarea>
+      <button id="saveEditBtn" class="mt-2 bg-green-500 hover:bg-green-400 text-white p-2 rounded-md w-full">ذخیره تغییرات</button>
+      <button id="cancelEditBtn" class="mt-2 bg-red-500 hover:bg-red-400 text-white p-2 rounded-md w-full">لغو</button>
+    </div>
+
+    <div id="overlay" class="hidden fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40"></div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
